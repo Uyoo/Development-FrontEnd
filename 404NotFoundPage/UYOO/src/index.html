@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found</title>
+
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="nav">
+          <div class="logo">
+            <span>logo</span>
+          </div>
+          <button class="contact">contact us</button>
+
+          <!-- modal -->
+          <div class="modal hidden">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+              <div class="close">
+                <button class="closeBtn">X</button>
+              </div>
+              <div class="contact-members">
+                <span>hs27951@gmail.com</span>
+                <span>wonilism@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="contents">
+          <div class="text">
+            <h1 class="text-title">Whoops, that page is gone.</h1>
+            <p class="text-body">
+              While you’re here, feast your eyes upon these tantalizing
+              <br />
+              popular designs matching the color
+              <span><a class="text-color" href="#">#0037ff</a>.</span>
+            </p>
+          </div>
+
+          <div class="notFoundCard">
+            <h1>4 0 4</h1>
+            <!-- <div class="firstSection">
+                            4
+                        </div>
+                        <div class="secondSection">
+                            0
+                        </div>
+                        <div class="thirdSection">
+                            4
+                        </div> -->
+          </div>
+        </div>
+      </main>
+
+      <div class="color-search">
+        <input
+          class="color-range-slider"
+          type="range"
+          min="0"
+          max="360"
+          value="180"
+        />
+
+        <div class="search">
+          <button class="searchBtn" type="search">
+            <i class="fa fa-search"></i>
+          </button>
+          <input
+            class="searchInput"
+            type="search"
+            placeholder="Search for..."
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
