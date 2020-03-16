@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    align-items: center;
+}
+.logo, .main_nav, .sub_nav{
+    flex: 0 0 auto;
+}
+.sub_nav{
+    margin-left: auto;
+}
+header{
+
+    /* fixed nav-bar */
+    padding: 0 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    
+
+    background-color: transparent;
+    color: #ddddff;
+    font-size: 0.9rem;
+}
+
+.logo_img{
+    font-size: 25px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.logo .header_toggleBtn{
+    display: none;
+}
+
+.main_nav{
+    display: flex;
+    align-items: center;
+    
+}
+.sub_nav{
+    display: flex;
+    justify-content: flex-end;
+    
+}
