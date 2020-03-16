@@ -21,6 +21,7 @@ header{
 }
 
 header{
+    width: 100%;
     /* fixed nav-bar */
     position: fixed;
     top: 0;
@@ -32,11 +33,14 @@ header{
     font-size: 0.9rem;
 }
 .logo{
-    width: 12%;
+    padding-left: 1rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 3rem;
 }
 .logo a img{
-    max-width: 100%;
-    height: auto !important;
+    height: 1em;
 }
 .logo .header_toggleBtn{
     display: none;
