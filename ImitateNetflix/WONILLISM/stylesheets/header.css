@@ -1,3 +1,4 @@
+/* layout */
 header{
     display: flex;
     align-items: center;
@@ -8,32 +9,6 @@ header{
 .sub_nav{
     margin-left: auto;
 }
-header{
-
-    /* fixed nav-bar */
-    padding: 0 3%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-
-    
-
-    background-color: transparent;
-    color: #ddddff;
-    font-size: 0.9rem;
-}
-
-.logo_img{
-    font-size: 25px;
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 5px;
-}
-.logo .header_toggleBtn{
-    display: none;
-}
-
 .main_nav{
     display: flex;
     align-items: center;
@@ -43,4 +18,32 @@ header{
     display: flex;
     justify-content: flex-end;
     
+}
+
+header{
+    /* fixed nav-bar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    background-color: transparent;
+    color: #ddddff;
+    font-size: 0.9rem;
+}
+.logo{
+    width: 12%;
+}
+.logo a img{
+    max-width: 100%;
+    height: auto !important;
+}
+.logo .header_toggleBtn{
+    display: none;
+}
+.main_nav .main_nav_tab{
+    padding-left: 1rem;
+}
+.sub_nav .sub_nav_tab{
+    padding-right: 1rem;
 }
