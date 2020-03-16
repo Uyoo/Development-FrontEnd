@@ -1,0 +1,23 @@
+.main-poster {
+  width: 97%;
+  height: 95%;
+  padding-left: 3%;
+}
+
+.main-poster__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.poster-info {
+  color: white;
+  /* background-color: rgb(219, 211, 194); */
+  border: 1px solid rgb(219, 211, 194);
+  position: absolute;
+  top: 18%;
+
+  width: 40%;
+  height: 77%;
+}

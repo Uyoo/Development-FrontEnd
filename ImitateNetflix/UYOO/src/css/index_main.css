@@ -1,0 +1,38 @@
+main {
+  width: 97%;
+  height: 100%;
+  padding-left: 3%;
+  color: white;
+}
+
+.contents {
+  width: 100%;
+  height: 100%;
+  height: fit-content;
+  /* background: rgb(208, 219, 221); */
+  background: transparent;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  padding: 0;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+
+  margin-right: 0.2%;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

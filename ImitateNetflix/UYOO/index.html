@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imitate Netflix</title>
+
+    <script
+      src="https://kit.fontawesome.com/7541329784.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <link rel="stylesheet" href="./src/css/index_header.css" />
+    <link rel="stylesheet" href="./src/css/index_main.css" />
+    <link rel="stylesheet" href="./src/css//index_mainPoster.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#">
+          <img src="./resources/logo.png" />
+        </a>
+        <button class="header-toggleBtn"><i class="fa fa-bars"></i></button>
+      </div>
+
+      <ul class="categories">
+        <li class="category category1">홈</li>
+        <li class="category category2">TV 프로그램</li>
+        <li class="category category3">영화</li>
+        <li class="category category4">최신 콘텐츠</li>
+        <li class="category category5">내가 찜한 콘텐츠</li>
+      </ul>
+
+      <ul class="search_notice_info">
+        <li class="search">search</li>
+        <li class="kids">키즈</li>
+        <li class="notice1"><i class="fas fa-gift"></i></li>
+        <li class="notice2"><i class="fas fa-bell"></i></li>
+        <li class="info"><i class="fas fa-user"></i></li>
+      </ul>
+    </header>
+
+    <!-- main poster -->
+    <div class="main-poster">
+      <img
+        class="main-poster__img"
+        alt="poster image"
+        src="./resources/drama_signal.jpg"
+      />
+
+      <div class="poster-info">
+        <div class="title-section"><h1>title</h1></div>
+        <div class="rank-section"><h2>rank description</h2></div>
+        <div class="description-section">
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            itaque culpa ullam, reiciendis deleniti dolorum asperiores ex nihil
+            incidunt? Quidem doloribus quo nihil perspiciatis esse cum eligendi
+            reprehenderit atque illum?
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- main contents -->
+    <main>
+      <!-- <div class="contents">
+        <div class="contents__title">
+          <h2>title</h2>
+        </div>
+
+        <div class="slider">
+          <div class="item contents__item1"><img src="" alt="" /></div>
+          <div class="item contents__item2"><img src="" alt="" /></div>
+        </div>
+      </div> -->
+    </main>
+
+    <!-- <footer>아이콘 4개(facebook, instagram, twitter, youtube)</footer> -->
+
+    <script src="./src/js/index_header.js"></script>
+    <script type="module" src="./src/js/index_main.js"></script>
+
+    <!-- templating -->
+    <script id="template-genre" type="template">
+      <div class="contents__title"><h1>{title}</h1></div>
+    </script>
+
+    <script id="template-slider__item" type="template">
+      <div class="item contents__item{index}">
+        <img src=https://image.tmdb.org/t/p/original/{imageSrc} alt={title}/>
+      </div>
+    </script>
+  </body>
+</html>
