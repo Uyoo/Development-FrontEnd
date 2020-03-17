@@ -1,0 +1,53 @@
+/* layout */
+header{
+    display: flex;
+    align-items: center;
+}
+.logo, .main_nav, .sub_nav{
+    flex: 0 0 auto;
+}
+.sub_nav{
+    margin-left: auto;
+}
+.main_nav{
+    display: flex;
+    align-items: center;
+    
+}
+.sub_nav{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+header{
+    width: 100%;
+    /* fixed nav-bar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    background-color: transparent;
+    color: #ddddff;
+    font-size: 0.9rem;
+}
+.logo{
+    padding-left: 1rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 3rem;
+}
+.logo a img{
+    height: 1em;
+}
+.logo .header_toggleBtn{
+    display: none;
+}
+.main_nav .main_nav_tab{
+    padding-left: 1rem;
+}
+.sub_nav .sub_nav_tab{
+    padding-right: 1rem;
+}
