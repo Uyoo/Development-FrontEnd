@@ -6,6 +6,6 @@ Develop Front-End skills using HTML/CSS/JS
 
 ### Result: uyoo
 
-![404NotFoundPage_uyoo](https://user-images.githubusercontent.com/34436556/77040142-b6553780-69fa-11ea-97c7-bb6b9b4a4407.gif)
+![404NotfoundPage_uyoo](https://user-images.githubusercontent.com/34436556/77042109-7728e580-69fe-11ea-8952-830f192696fb.gif)
 
 ## Imitate Neflix
