@@ -18,10 +18,10 @@ const getPopularMovie = popularMovie =>{
         //console.log(json);
         const popularMovieImg = document.querySelector('.popular_move_img');
         const popularMovies = json.results;
-        // console.log(popularMovies);
-        let r = Math.round(Math.random()*popularMovies.length);
+        console.log(popularMovies);
+        let r = Math.floor(Math.random()*popularMovies.length);
         // console.log(r);
-        popularMovieImg.src += popularMovies[r].poster_path;
+        popularMovieImg.src += popularMovies[r].backdrop_path;
     })
     .catch(function(e){
         console.log(e);

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,35 +12,41 @@
     <link rel="stylesheet" type="text/css" href="./src/stylesheets/header.css">
     <link rel="stylesheet" href="./src/stylesheets/popularMovie.css">
 </head>
+
 <body>
     <!-- header -->
     <header>
-        <div class="logo">
-            <a href="">
-                <img src="./assets/img/Netflix_logo.png" alt="NETFLIX">
-            </a>
-            <button class="header_toggleBtn"><i class="fa fa-bars"></i></button>
+        <div class="header_container">
+            <div class="logo">
+                <a href="">
+                    <img src="./assets/img/Netflix_logo.png" alt="NETFLIX">
+                </a>
+                <button class="header_toggleBtn"><i class="fa fa-bars"></i></button>
+            </div>
+            <ul class="main_nav">
+                <li class="main_nav_tab">홈</li>
+                <li class="main_nav_tab">TV 프로그램</li>
+                <li class="main_nav_tab">영화</li>
+                <li class="main_nav_tab">최신 콘텐츠</li>
+                <li class="main_nav_tab">내가 찜한 콘텐츠</li>
+            </ul>
+            <ul class="sub_nav">
+                <li class="sub_nav_tab"><i class="fas fa-search"></i></li>
+                </li>
+                <li class="sub_nav_tab">키즈</li>
+                <li class="sub_nav_tab"><i class="fas fa-gift"></i></li>
+                <li class="sub_nav_tab"><i class="fas fa-bell"></i></li>
+                <li class="sub_nav_tab"><i class="fas fa-user"></i></li>
+            </ul>
         </div>
-        <ul class="main_nav">
-            <li class="main_nav_tab">홈</li>
-            <li class="main_nav_tab">TV 프로그램</li>
-            <li class="main_nav_tab">영화</li>
-            <li class="main_nav_tab">최신 콘텐츠</li>
-            <li class="main_nav_tab">내가 찜한 콘텐츠</li> 
-        </ul>
-        <ul class="sub_nav">
-            <li class="sub_nav_tab"><i class="fas fa-search"></i></li></li>
-            <li class="sub_nav_tab">키즈</li>
-            <li class="sub_nav_tab"><i class="fas fa-gift"></i></li>
-            <li class="sub_nav_tab"><i class="fas fa-bell"></i></li>
-            <li class="sub_nav_tab"><i class="fas fa-user"></i></li>
-        </ul>
     </header>
     <div class="popular_movie">
         <img src="https://image.tmdb.org/t/p/w500/" alt="popular movie" class="popular_move_img">
     </div>
 
     <!-- scripts -->
+    <script src="./src/javascripts/header.js"></script>
     <script type="module" src="./src/javascripts/index.js"></script>
 </body>
+
 </html>

@@ -1,13 +1,14 @@
 /* layout */
 header{
+    top: 0; 
+    background: transparent;
+}
+.header_container{
     display: flex;
     align-items: center;
 }
 .logo, .main_nav, .sub_nav{
     flex: 0 0 auto; /* flex: none */
-}
-.sub_nav{
-    margin-left: auto;
 }
 .main_nav{
     display: flex;
@@ -16,11 +17,11 @@ header{
 }
 .sub_nav{
     display: flex;
-    justify-content: flex-end;
-    
+    align-items: center;
+    margin-left: auto;
 }
 
-header{
+.header_container{
     width: 100%;
     /* fixed nav-bar */
     position: fixed;
@@ -28,7 +29,7 @@ header{
     left: 0;
     z-index: 2;
 
-    background-color: transparent;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
     color: #ddddff;
     font-size: 0.9rem;
 }
