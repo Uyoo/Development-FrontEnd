@@ -42,6 +42,7 @@ header {
 }
 
 .categories .category {
+  width: fit-content;
   padding: 1% 1%;
   cursor: pointer;
   border-radius: 4px;
@@ -49,7 +50,8 @@ header {
 
 /* ===== search_notice_info ===== */
 .search_notice_info {
-  width: 70%;
+  width: 100%;
+  padding: 0;
 
   display: flex;
   justify-content: flex-end;
@@ -57,12 +59,14 @@ header {
   list-style: none;
 }
 
+.search_notice_info .signUp,
 .search_notice_info .search,
 .search_notice_info .kids,
 .search_notice_info .notice1,
 .search_notice_info .notice2,
 .search_notice_info .info {
   cursor: pointer;
+  width: fit-content;
   padding: 1.5% 1.5%;
   border-radius: 4px;
 }

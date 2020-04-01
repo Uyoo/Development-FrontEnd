@@ -8,7 +8,7 @@ const getPopularMovie = async () => {
 
   const randomNum = Math.floor(Math.random() * response.results.length);
   const movieInfo = response.results[randomNum];
-  console.log(movieInfo);
+  // console.log(movieInfo);
 
   //paint main poster
   const mainPoster = document.querySelector(".main-poster");

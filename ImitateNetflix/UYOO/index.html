@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./src/css/index_header.css" />
     <link rel="stylesheet" href="./src/css/index_main.css" />
     <link rel="stylesheet" href="./src/css//index_mainPoster.css" />
+    <link rel="stylesheet" href="./src/css/index_modal.css" />
   </head>
   <body>
     <header>
@@ -42,6 +43,7 @@
       </ul>
 
       <ul class="search_notice_info">
+        <li class="signUp">회원가입</li>
         <li class="search">search</li>
         <li class="kids">키즈</li>
         <li class="notice1"><i class="fas fa-gift"></i></li>
@@ -49,6 +51,50 @@
         <li class="info"><i class="fas fa-user"></i></li>
       </ul>
     </header>
+
+    <!-- modal -->
+    <div class="modal-container hidden">
+      <div class="modal">
+        <div class="modal__header">
+          <h3>Sign Up</h3>
+          <button class="modal__header__closeBtn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="modal__content">
+          <form action="" class="form">
+            <div class="username">
+              <label for="name">Name</label>
+              <input type="text" placeholder="아이디 입력" id="name" />
+            </div>
+
+            <div class="userEmail">
+              <label for="email">Email</label>
+              <input type="text" placeholder="이메일 입력" id="email" />
+            </div>
+
+            <div class="userPassword">
+              <label for="password">Password</label>
+              <input type="text" placeholder="비밀번호 입력" id="password" />
+            </div>
+
+            <div class="userPassword-validation">
+              <label for="password-validation">Confirm Password</label>
+              <input
+                type="text"
+                placeholder="비밀번호 확인"
+                id="password-validation"
+              />
+            </div>
+
+            <div class="submit">
+              <input class="submitBtn" type="submit" value="회원가입" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- main poster -->
     <div class="main-poster">
@@ -86,6 +132,7 @@
 
     <script src="./src/js/index_header.js"></script>
     <script type="module" src="./src/js/index_main.js"></script>
+    <script src="./src/js/index_modal.js"></script>
 
     <!-- templating -->
     <script id="template-genre" type="template">
