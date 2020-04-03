@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="./src/stylesheets/init.css">
     <link rel="stylesheet" type="text/css" href="./src/stylesheets/header.css">
     <link rel="stylesheet" href="./src/stylesheets/popularMovie.css">
+    <link rel="stylesheet" type="text/css" href="./src/stylesheets/main.css">
+    
+    
 </head>
 
 <body>
@@ -42,27 +45,36 @@
     </header>
     <main>
         <div class="popular_movie">
-            <img src="https://image.tmdb.org/t/p/w500/" alt="popular movie" class="popular_movie_img">
+            <img src="" alt="popular movie" class="popular_movie_img">
             <div class="popular_movie_info">
-                <div class="popular_movie_title">
-                    <h1>Title</h1>
-                </div>
-                <div class="popular_movie_rank">
-                    <h2>Rank: </h2>
-                </div>
-                <div class="popular_movie_overview">...</div>
+                <div class="popular_movie_title"></div>
+                <div class="popular_movie_overview"></div>
+                <div class="popular_movie_rank"></div>
             </div>
         </div>
-        <template>
-            <div class="genre">
-                
+        <!-- <div class="contents_by_genre">
+            <div class="genre_title">
+
             </div>
-        </template>
+        </div>
+        <div class="slider">
+            ...items
+        </div> -->
     </main>
 
     <!-- scripts -->
     <script src="./src/javascripts/header.js"></script>
     <script type="module" src="./src/javascripts/index.js"></script>
+
+    <!-- templating -->
+    <script id="template-genre" type="template">
+        <div class="contents_title"><h1>{title}</h1></div>
+    </script>
+    <script id="template-slider_item" type="template">
+        <div class="item contents_item{idx}">
+            <img src=https://image.tmdb.org/t/p/original/{imageSrc} alt={title}/>
+        </div>
+    </script>
 </body>
 
 </html>

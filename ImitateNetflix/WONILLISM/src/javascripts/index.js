@@ -1,34 +1,85 @@
-import {APP_KEY} from "../key/appKey.js";
-const popularUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${APP_KEY}`;
+import * as api from "../lib/api.js";
 
-const getPopularMovies = popularMovies =>{
-    fetch(
-        popularUrl,{method: "GET", headers:{}}
-    )
-    .then(response=>{
-        //console.log(response);
-        return response.json();
-    })
-    .then(json=>{
-        //console.log(json);
-        const arrMovies = json.results;
-        const popularMovieImg = document.querySelector('.popular_movie_img');
-        const popularMovieTitle = document.querySelector('.popular_movie_title h1');
-        const popularMovieRank = document.querySelector('.popular_movie_rank h2');
-        const popularMovieOverview = document.querySelector('.popular_movie_overview');
-        let r = Math.floor(Math.random()*arrMovies.length);
-        // console.log(r);
+const API_RESOURSE = "https://image.tmdb.org/t/p/original/";
 
-        /* get random main page info */
-        const mainPageInfo = arrMovies[r];
-        popularMovieImg.src += mainPageInfo.backdrop_path;     
-        popularMovieTitle.innerHTML = mainPageInfo.title;
-        popularMovieRank.innerHTML ='Rank: '+ r;
-        popularMovieOverview.innerHTML = mainPageInfo.overview; 
-    })
-    .catch(function(e){
-        console.log(e);
-    })
+const getPopularMovie = async () => {
+    const response = await api.getPopularMovieAPI();
+    //console.log(response);
+
+    const randomNum = Math.floor(Math.random() * response.results.length);
+    const movieInfo = response.results[randomNum];
+    //console.log(movieInfo);
+
+    const popularMovie = document.querySelector('.popular_movie');
+    const popularMovieImg = document.querySelector('.popular_movie_img');
+    const popularMovieTitle = document.querySelector('.popular_movie_title');
+    const popularMovieRank = document.querySelector('.popular_movie_rank');
+    const popularMovieOverview = document.querySelector('.popular_movie_overview');
+
+    popularMovieTitle.innerHTML = movieInfo.title;
+    popularMovieImg.src = API_RESOURSE + movieInfo.backdrop_path;
+    popularMovieRank.innerHTML = 'RANK: ' + randomNum;
+
+    //console.log(movieInfo.overview.length);
+    if (movieInfo.overview.length > 150) {
+        popularMovieOverview.innerHTML = movieInfo.overview.substring(0, 150) + '...';
+    }
+    else {
+        popularMovieOverview.innerHTML = movieInfo.overview;
+    }
+};
+
+const getContents = async genre => {
+    const date = new Date();
+    const response = await api.getGenresContentsAPI(genre, date);
+    const contents = response.results;
+    //console.log(contents);
+
+    const main = document.querySelector("main");
+    const contentsSection = document.createElement("div");
+    contentsSection.classList.add("contents");
+    const templateGenre = document.querySelector("#template-genre").innerHTML;
+
+    let resultHTML = "";
+    resultHTML = templateGenre.replace("{title}", genre.name);
+    contentsSection.innerHTML = resultHTML;
+
+    const slider = document.createElement("div");
+    slider.classList.add("slider");
+
+    let html_item = "";
+    contents.map(content => {
+        //console.log(content);
+        if (content.poster_path !== null) {
+            const templateSliderContents = document.querySelector(
+                "#template-slider_item"
+            ).innerHTML;
+
+
+            html_item += templateSliderContents
+                .replace("{idx}", content.id)
+                .replace("{imageSrc}", content.poster_path)
+                .replace("{title}", content.title);
+        }
+    });
+    slider.innerHTML = html_item;
+    contentsSection.appendChild(slider);
+    main.appendChild(contentsSection);
 }
 
-getPopularMovies();
+const getGenres = async () => {
+    const response = await api.getGenresAPI();
+    const genres = response.genres;
+    console.log(genres);
+    genres.map(genre => {
+        getContents(genre);
+    });
+}
+
+function init() {
+    getPopularMovie();
+    getGenres();
+}
+init();
+
+
