@@ -1,33 +1,34 @@
 import {APP_KEY} from "../key/appKey.js";
-//const APP_KEY = "82d29c7e28e4f090ab1cc7e20da2d4a2";
-const getPopularMovie = popularMovie =>{
+const popularUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${APP_KEY}`;
+
+const getPopularMovies = popularMovies =>{
     fetch(
-        `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${APP_KEY}`,
-        {
-            method: "GET",
-            headers:{
-                
-            }
-        }
+        popularUrl,{method: "GET", headers:{}}
     )
-    .then(function(response){
+    .then(response=>{
         //console.log(response);
         return response.json();
     })
-    .then(function(json){
+    .then(json=>{
         //console.log(json);
-        const popularMovieImg = document.querySelector('.popular_move_img');
-        const popularMovies = json.results;
-        console.log(popularMovies);
-        let r = Math.floor(Math.random()*popularMovies.length);
+        const arrMovies = json.results;
+        const popularMovieImg = document.querySelector('.popular_movie_img');
+        const popularMovieTitle = document.querySelector('.popular_movie_title h1');
+        const popularMovieRank = document.querySelector('.popular_movie_rank h2');
+        const popularMovieOverview = document.querySelector('.popular_movie_overview');
+        let r = Math.floor(Math.random()*arrMovies.length);
         // console.log(r);
-        popularMovieImg.src += popularMovies[r].backdrop_path;
+
+        /* get random main page info */
+        const mainPageInfo = arrMovies[r];
+        popularMovieImg.src += mainPageInfo.backdrop_path;     
+        popularMovieTitle.innerHTML = mainPageInfo.title;
+        popularMovieRank.innerHTML ='Rank: '+ r;
+        popularMovieOverview.innerHTML = mainPageInfo.overview; 
     })
     .catch(function(e){
         console.log(e);
     })
 }
-function init(){
-    getPopularMovie();
-}
-init();
+
+getPopularMovies();
