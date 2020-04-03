@@ -1,5 +1,13 @@
+:root {
+  /* Color */
+  --grey-light-color: aliceblue;
+
+  /* Size */
+  --spacing: 3%;
+}
+
 header {
-  padding: 0 3%;
+  padding: 0 var(--spacing);
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +19,7 @@ header {
 
   /* background-color: rgb(20, 20, 20); */
   background-color: transparent;
-  color: aliceblue;
+  color: var(--grey-light-color);
   font-size: 0.9rem;
 }
 

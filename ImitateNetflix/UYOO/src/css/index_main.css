@@ -1,7 +1,15 @@
+:root {
+  /* Color */
+  --grey-light-color: aliceblue;
+
+  /* Size */
+  --spacing: 3%;
+}
+
 main {
   width: 97%;
   height: 100%;
-  padding-left: 3%;
+  padding-left: var(--spacing);
   color: white;
 }
 

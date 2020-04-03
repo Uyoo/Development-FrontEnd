@@ -1,7 +1,15 @@
+:root {
+  /* Color */
+  --grey-light-color: aliceblue;
+
+  /* Size */
+  --spacing: 3%;
+}
+
 .main-poster {
   width: 97%;
   height: 95%;
-  padding-left: 3%;
+  padding-left: var(--spacing);
 }
 
 .main-poster__img {
