@@ -1,7 +1,15 @@
+:root {
+  /* Color */
+  --grey-light-color: aliceblue;
+
+  /* Size */
+  --spacing: 3%;
+}
+
 .main-poster {
   width: 97%;
   height: 95%;
-  padding-left: 3%;
+  padding-left: var(--spacing);
 }
 
 .main-poster__img {
@@ -9,15 +17,24 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+
+  opacity: 0.6;
 }
 
 .poster-info {
   color: white;
-  /* background-color: rgb(219, 211, 194); */
-  border: 1px solid rgb(219, 211, 194);
+  /* border: 1px solid rgb(219, 211, 194); */
   position: absolute;
-  top: 18%;
+  top: 15%;
 
   width: 40%;
   height: 77%;
+  padding: 0 2%;
+}
+
+.poster-info .description-section h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
 }

@@ -1,13 +1,20 @@
+:root {
+  /* Color */
+  --grey-light-color: aliceblue;
+
+  /* Size */
+  --spacing: 3%;
+}
+
 main {
   width: 97%;
   height: 100%;
-  padding-left: 3%;
+  padding-left: var(--spacing);
   color: white;
 }
 
 .contents {
   width: 100%;
-  height: 100%;
   height: fit-content;
   /* background: rgb(208, 219, 221); */
   background: transparent;
@@ -16,23 +23,29 @@ main {
 .slider {
   width: 100%;
   height: 100%;
+  padding: 0;
+
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
 
-  padding: 0;
+  overflow-x: scroll;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
 }
 
 .item {
   width: 200px;
   height: 200px;
 
-  margin-right: 0.2%;
+  margin-right: 0.25%;
 }
 
 .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: inherit;
+  height: inherit;
+  object-fit: fill;
   object-position: center;
 }
