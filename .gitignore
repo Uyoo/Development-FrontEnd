@@ -1,9 +1,12 @@
 .vscode/
 
+package-lock.json
+
+
+# uyoo
 ImitateNetflix/UYOO/src/key/**
 ImitateNetflix/UYOO/node_modules/**
-
 ImitateNetflix/UYOO/package-lock.json
 
-
+# wonillism
 ImitateNetflix/WONILLISM/src/key/
