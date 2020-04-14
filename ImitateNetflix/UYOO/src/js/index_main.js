@@ -28,7 +28,7 @@ const getPopularMovie = async () => {
   mainPosterDescription.innerText = movieInfo.overview;
 };
 
-const getContents = async genre => {
+const getContents = async (genre) => {
   const date = new Date();
   const response = await api.getGenreContentsAPI(genre, date);
   const contents = response.results;
@@ -49,7 +49,7 @@ const getContents = async genre => {
   slider.classList.add("slider");
 
   let html_item = "";
-  contents.map(content => {
+  contents.map((content) => {
     if (content.poster_path !== null) {
       const templateSliderContents = document.querySelector(
         "#template-slider__item"
@@ -72,7 +72,7 @@ const getGenres = async () => {
   const genres = response.genres;
   // console.log("genres: ", genres);
 
-  genres.map(genre => {
+  genres.map((genre) => {
     getContents(genre);
   });
 };
