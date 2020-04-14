@@ -26,6 +26,6 @@ Develop Front-End skills using HTML/CSS/JS
 
   - Mobile
 
-    <img src="./ImitateNetflix/UYOO/demo/ImitateNetflix_Mobile.gif" width="100%" height="100%" title="Desktop 버전" alt="demo_desktop"></img>
+    <img src="./ImitateNetflix/UYOO/demo/ImitateNetflix_Mobile.gif" width="60%" height="350px" title="Desktop 버전" alt="demo_desktop"></img>
 
 ### Result: WONILLISM
