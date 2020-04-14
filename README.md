@@ -39,5 +39,3 @@ Develop Front-End skills using HTML/CSS/JS
   - Desktop
 
   - Mobile
-
-### Result: WONILLISM
