@@ -12,9 +12,15 @@ const handleCloseBtn = () => {
   modalContainer.classList.toggle(HIDDEN);
 };
 
+const handleClickWindow = e => {
+  console.log(e.target);
+  e.target === modalContainer ? modalContainer.classList.add(HIDDEN) : false;
+};
+
 function init() {
   signUpBtn.addEventListener("click", handleClickSignUpBtn);
   modalCloseBtn.addEventListener("click", handleCloseBtn);
+  window.addEventListener("click", handleClickWindow);
 }
 
 init();
