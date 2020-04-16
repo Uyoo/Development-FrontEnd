@@ -1,0 +1,64 @@
+.handler{
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    flex-direction: column;
+}
+.range_container{
+    width: 100%;
+    height: 36px;
+    display: flex;
+}
+.filter-range{
+    width: 80%;
+    
+    display: block;
+    background: transparent;
+    outline: none;
+    margin: 0 auto;
+    
+    font-size: 12px;
+
+    -webkit-appearance: none;
+    appearance: none;
+}
+.filter-range:focus{
+    outline: none;
+}
+.filter-range::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none !important;
+    
+    border-radius: 0.5em;
+    height: 0.5em;
+    background: #FF6864;
+}
+.filter-range::-webkit-slider-thumb{
+    height: 1em;
+    width: 1em;
+    margin-top: -0.2em;
+    border: 1.5px solid white;
+    border-radius: 1em;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #F3E367;
+    cursor: pointer;
+    cursor: move;
+    cursor: grab;
+    cursor: -webkit-grab;
+    transition: box-shadow 0.2s ease-in-out, m 0.1s ease-in-out;
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.05);
+}
+
+.categories{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox_container{
+    padding-left: 20px;
+    padding-top: 10px;
+}

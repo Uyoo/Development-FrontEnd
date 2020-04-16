@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,47 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="./src/stylesheets/init.css">
+    <link rel="stylesheet" href="./src/stylesheets/filter.css">
+    <link rel="stylesheet" href="./src/stylesheets/list.css">
     <link rel="stylesheet" href="./src/stylesheets/index.css">
 </head>
+
 <body>
     <main>
         <div class="filter">
-            <h2>필터<br></h2>
-            <div class="likes_handler">
-                <input type="range" class="filter-range">
+            <span class="container-title">FILTER</span>
+            <div class="handler">
+                <span class="element-title">LIKES</span>
+                <div class="range_container">
+                    <input type="range" class="likes_range filter-range">
+                </div>
             </div>
-            <div class="views_handler">
-
+            <div class="handler">
+                <span class="element-title">VIEWS</span>
+                <div class="range_container">
+                    <input type="range" class="views_range filter-range">
+                </div>
             </div>
-            <div class="container">
-
+            <div class="categories">
+                <span class="element-title">CATEGORIES</span>
+                <div class="checkbox_container">
+                    <input type="checkbox" class="category-checkbox">
+                    A
+                    
+                </div>
             </div>
         </div>
-        <div class="latest_item">
-
-        </div>
-        <div class="item_list">
-
+        <div class="list-container">
+            <div class="latest_video">
+                <span class="container-title">Latest video</span>
+            </div>
+            <div class="item_container">
+                <div class="item">
+                    <p>item1</p>
+                </div>
+            </div>
         </div>
     </main>
 </body>
+
 </html>
