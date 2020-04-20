@@ -1,15 +1,39 @@
+.color_tmp{
+    /* rgb */
+    color:rgba(13,22,24,1);
+    color:rgba(11,28,35,1);
+    color:rgba(15,25,28,1);
+    color:rgba(21,35,38,1);
+    color:rgba(95,176,221,1);
+    color:rgba(247,243,250,1);
+
+    /* hex */
+    color:#0D1618;
+    color:#0B1C23;
+    color:#0F191C;
+    color:#152326;
+    color:#5FB0DD;
+    color:#F7F3FA;
+}
 main{
     width: 100%; 
     height: 100%; 
     
-    color: white; 
-    background: #FAF0DC; 
+    color: #5FB0DD; 
+    /* background: #0D1618;  */
+    background: linear-gradient(155deg, #0D1618 55%, #0B1C23 55% 80%, #0F191C 80%);
 
-    display: flex; 
-    justify-content: space-around;
+    overflow-y: scroll;
     
 }
-
+.over_flow{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(33,35,64,0)80%,rgba(33,35,64,1) 90%);
+}
 .container-title{
     font-size: 24px;
     font-weight: bold;
@@ -21,64 +45,41 @@ main{
 }
 
 .filter{
-    margin-top: 30px;
-    width: 30%;
-    height: 90%; 
-    background: #0B4141; 
+    /* display: none; */
+    /* border:1px solid red; */
+    position: fixed;
+    margin-left: 2.5%;
+    width: 35%;
+    
+    box-shadow: 5px 5px 5px black;
+    background: #152326; 
     
 }
 
 .list-container{
-    margin-top: 30px;
-    width: 60%; 
-    height: 90%; 
+    position: relative;    
 
+    /* border: 1px solid red; */
+
+    margin-left: 40%;
+    width: 57.5%;
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;    
 }
-.latest_video{
-    width: 100%;
-    height: 15%;
-    background: #0B4141;    
-}
-.item_container{
-    margin-top: 20px;
-    width: 100%;
-    height: 25%;
-    background: #0B4141;  
-}
+
+
 
 /* tablet */
 @media screen and (max-width: 768px){
     .filter{
-        margin-top: 10px;        
+        margin-left: 2%;                
     }
     .list-container{
-        margin-top: 10px;
+        margin-left: 39.25%;
     }
 }
 
 /* mobile */
 @media screen and (max-width: 420px){
-    main{ 
-        flex-direction: column;        
-        justify-content: space-around;
-        align-items: center;
-    }
-    .filter{
-        width: 90%;
-        height: auto;
-        margin-top: 10px;       
-    }
-    .list-container{
-        margin-top: 10px;
-        width: 90%; 
-    }
-    .latest_video{
-        display: none;
-    }
-
-    .checkbox_container{
-        display: none;
-    }
+   
 }
