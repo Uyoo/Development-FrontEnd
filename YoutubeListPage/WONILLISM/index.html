@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <div class="over_flow"></div>
     <main>
         <div class="filter">
             <span class="container-title">FILTER</span>
@@ -32,51 +31,33 @@
             </div>
             <div class="categories">
                 <span class="element-title">CATEGORIES</span>
+                <div class="checkbox-wrap"></div>
             </div>
         </div>
         <div class="list-container">
             <div class="latest_video">
                 <span class="container-title">LATEST VIDEO</span>
             </div>
-            <div class="item_container">
-                <div class="item">
-                    <p>item1</p>
-                </div>
-            </div>
-            <div class="item_container">
-                <div class="item">
-                    <p>item1</p>
-                </div>
-            </div>
-            <div class="item_container">
-                <div class="item">
-                    <p>item1</p>
-                </div>
-            </div>
-            <div class="item_container">
-                <div class="item">
-                    <p>item1</p>
-                </div>
-            </div>
-            <div class="item_container">
-                <div class="item">
-                    <p>item1</p>
-                </div>
-            </div>
+            <div class="item-wrap"></div>
         </div>
     </main>
-
-    <!-- scripts -->
-    <script type="module" src="./src/javascripts/index.js"></script>
 
     <!-- templating -->
     <script id="template-category" type="template">
         <div class="checkbox_container">
-            <label><input type="checkbox" class="{id}_checkbox">{title}</label>
+            <label><input type="checkbox" class="filter-chkbox" id="{id}_checkbox">{title}</label>
         </div>
     </script>
+    <script id="template-item" type="template">
+        <div class="item_container">
+            {item_title}
+        </div>
+    </script>
+
+    <!-- scripts -->
+    <script type="module" src="./src/javascripts/filter.js"></script>
+    <script type="module" src="./src/javascripts/index.js"></script>
+    
 </body>
 
 </html>
-
-<!-- <label for="categiry_checkbox">{title}</label> -->

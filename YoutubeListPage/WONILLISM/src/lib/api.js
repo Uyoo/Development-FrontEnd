@@ -4,7 +4,7 @@ const API_HOST = "https://www.googleapis.com/youtube/v3";
 
 export const getCategoriesAPI = () =>{
     return fetch(
-        `${API_HOST}/guideCategories?part=snippet&regionCode=KR&key=${APP_KEY}`,
+        `${API_HOST}/videoCategories?part=snippet&regionCode=KR&key=${APP_KEY}`,
         {
             method:"GET",
             headers:{
@@ -15,14 +15,14 @@ export const getCategoriesAPI = () =>{
     .then(response => response.json())
 }
 
-export const getChennelInfoAPI = () =>{
+export const getItemAPI = (id) =>{
     return fetch(
-        `${API_HOST}/playlists?part=snippet&id=UCBR8-60-B28hp2BmDPdntcQ&key=${APP_KEY}`,
+        `${API_HOST}/videos?part=snippet&chart=mostPopular&regionCode=KR&videoCategoryId=0&key=${APP_KEY}`,
         {
             method:"GET",
             headers:{
                 "Content-Type": "application/json"
             }
         }
-    ).then(response => response.json());
+    ).then(response => response.json());    
 }

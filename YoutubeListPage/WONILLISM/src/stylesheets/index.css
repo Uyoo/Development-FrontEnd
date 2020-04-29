@@ -26,13 +26,9 @@ main{
     overflow-y: scroll;
     
 }
-.over_flow{
+/* Hide scrollbar for Chrome, Safari and Opera */
+main::-webkit-scrollbar{
     display: none;
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(33,35,64,0)80%,rgba(33,35,64,1) 90%);
 }
 .container-title{
     font-size: 24px;
@@ -45,15 +41,11 @@ main{
 }
 
 .filter{
-    /* display: none; */
-    /* border:1px solid red; */
     position: fixed;
     margin-left: 2.5%;
     width: 35%;
-    
     box-shadow: 5px 5px 5px black;
     background: #152326; 
-    
 }
 
 .list-container{
